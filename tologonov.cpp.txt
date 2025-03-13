@@ -1,0 +1,41 @@
+#include <iostream>
+
+class Trapezoid {
+private:
+    double a; // Длина первого основания
+    double b; // Длина второго основания
+    double c; // Длина первой боковой стороны
+    double d; // Длина второй боковой стороны
+    double h; // Высота
+
+public:
+    // Конструктор для инициализации трапеции
+    Trapezoid(double a, double b, double c, double d, double h) 
+        : a(a), b(b), c(c), d(d), h(h) {}
+
+    // Метод для вычисления периметра
+    double perimeter() const {
+        return a + b + c + d;
+    }
+
+    // Метод для вычисления площади
+    double area() const {
+        return ((a + b) / 2) * h;
+    }
+
+    // Метод для вычисления длины средней линии
+    double midlineLength() const {
+        return (a + b) / 2;
+    }
+};
+
+int main() {
+    // Создаем экземпляр трапеции с заданными параметрами
+    Trapezoid trapezoid(5, 7, 4, 4, 3);
+
+    std::cout << "Периметр трапеции: " << trapezoid.perimeter() << std::endl;
+    std::cout << "Площадь трапеции: " << trapezoid.area() << std::endl;
+    std::cout << "Длина средней линии трапеции: " << trapezoid.midlineLength() << std::endl;
+
+    return 0;
+}
