@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // Для функции sqrt
+#include <cmath> // Р”Р»СЏ С„СѓРЅРєС†РёРё sqrt
 
 class Rectangle {
 private:
@@ -7,20 +7,20 @@ private:
     double height;
 
 public:
-    // Инициализации ширины и высоты
+    // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С€РёСЂРёРЅС‹ Рё РІС‹СЃРѕС‚С‹
     Rectangle(double w, double h) : width(w), height(h) {}
 
-    // Вычисления периметра
+    // Р’С‹С‡РёСЃР»РµРЅРёРµ РїРµСЂРёРјРµС‚СЂР°
     double calculatePerimeter() {
         return 2 * (width + height);
     }
 
-    // Вычисления площади
+    // Р’С‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё
     double calculateArea() {
         return width * height;
     }
 
-    // Вычисления длины диагонали
+    // Р’С‹С‡РёСЃР»РµРЅРёРµ РґР»РёРЅС‹ РґРёР°РіРѕРЅР°Р»Рё
     double calculateDiagonal() {
         return sqrt(width * width + height * height);
     }
@@ -29,18 +29,18 @@ public:
 int main() {
     double width, height;
 
-    // Ввод ширины и высоты
-    std::cout << "Введите ширину прямоугольника: ";
+    // Р’РІРѕРґ С€РёСЂРёРЅС‹ Рё РІС‹СЃРѕС‚С‹
+    std::cout << "Р’РІРµРґРёС‚Рµ С€РёСЂРёРЅСѓ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°: ";
     std::cin >> width;
-    std::cout << "Введите высоту прямоугольника: ";
+    std::cout << "Р’РІРµРґРёС‚Рµ РІС‹СЃРѕС‚Сѓ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°: ";
     std::cin >> height;
 
     Rectangle rect(width, height);
 
-    // Вывод результатов
-    std::cout << "Периметр прямоугольника: " << rect.calculatePerimeter() << std::endl;
-    std::cout << "Площадь прямоугольника: " << rect.calculateArea() << std::endl;
-    std::cout << "Длина диагонали прямоугольника: " << rect.calculateDiagonal() << std::endl;
+    // Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
+    std::cout << "РџРµСЂРёРјРµС‚СЂ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°: " << rect.calculatePerimeter() << std::endl;
+    std::cout << "РџР»РѕС‰Р°РґСЊ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°: " << rect.calculateArea() << std::endl;
+    std::cout << "Р”Р»РёРЅР° РґРёР°РіРѕРЅР°Р»Рё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°: " << rect.calculateDiagonal() << std::endl;
 
     return 0;
 }
