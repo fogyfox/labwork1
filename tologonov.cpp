@@ -38,7 +38,7 @@ int main() {
     double perimeter = a + b + c;
     std::cout << "Периметр треугольника: " << perimeter << std::endl;
 
-    // Вычисление площади по формуле Герона
+    // Вычисление площади по формуле Герон
     double p = perimeter / 2; // Полупериметр
     double area = sqrt(p * (p - a) * (p - b) * (p - c));
     std::cout << "Площадь треугольника: " << area << std::endl;
@@ -65,8 +65,33 @@ int main() {
     std::cin >> side2;
     std::cout << "Введите высоту h трапеции: ";
     std::cin >> height;
-
-
+    //трапеции Проверка на существование
+    if (base1<= 0 || base2<=0 || side1<=0 || side2<=0 || height <=0 ){
+      std::cout << "трапеция не сущ" << std::endl;
+      return 1;
+    
+    }
+  
+    if ( height == 0){
+      std::cout << "трапеция не сущ" << std::endl;
+      return 0;
+    
+    }
+    if (base1 + base2 > side1+side1 ){
+      std::cout << "трапеция не сущ" << std::endl;
+      return 1;
+      
+    
+    }
+    if ((hight <= side1 ||  hight <= side2){
+        std::cout << "трапеция не сущ" << std::endl;
+        return 1;
+    }
+    
+   if ((base1 + base2) || side1<=0 || side2<=0 || height <=0 ){
+        std::cout << "трапеция не сущ" << std::endl;
+        return 1;
+    }
     // Вычисление параметров трапеции
     double trapPerimeter = trapezoidPerimeter(base1, base2, side1, side2);
     double trapArea = trapezoidArea(base1, base2, height);
